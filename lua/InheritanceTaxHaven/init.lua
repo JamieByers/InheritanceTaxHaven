@@ -1,6 +1,6 @@
 local M = {}
 
-local function getLines()
+function M.getLines()
     local lines = {}
 
     for buf, _ in pairs(vim.api.nvim_list_bufs()) do
@@ -15,3 +15,7 @@ local function getLines()
     print(lines)
 
 end
+
+vim.api.nvim_create_user_command("getLines",
+    M.getLines()
+)
