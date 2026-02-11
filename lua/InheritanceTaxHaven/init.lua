@@ -17,5 +17,6 @@ function M.getLines()
 end
 
 vim.api.nvim_create_user_command("ITHGetLines",
-    M.getLines
+    M.getLines,
+    {}
 )
