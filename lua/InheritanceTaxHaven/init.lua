@@ -12,10 +12,10 @@ function M.getLines()
     end
 
 
-    print(lines)
+    vim.print(lines)
 
 end
 
-vim.api.nvim_create_user_command("getLines",
-    M.getLines()
+vim.api.nvim_create_user_command("ITHGetLines",
+    M.getLines
 )
