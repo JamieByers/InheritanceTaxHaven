@@ -2,6 +2,30 @@ print("ITH plugin loaded")
 
 local M = {}
 
+function M.GetRoot();
+    local root = vim.fs.root(0, {
+        ".git",
+    })
+
+    if not root then
+       root = vim.loop.cwd()
+    end
+
+    vim.print("Root: ", root)
+   return root
+end
+
+function M.GetFiles()
+    local root = M.GetRoot()
+
+    local dir = vim.fs.dir(root)
+    vim.print(dir)
+
+
+end
+
+
+
 function M.GetLines()
     local buf_lines = {}
 
