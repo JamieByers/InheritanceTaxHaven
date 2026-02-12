@@ -15,7 +15,8 @@ function M.GetLines()
         end
     end
 
-    vim.print(buf_lines)
+    vim.json.encode(buf_lines)
+    vim.print(vim.json.encode(buf_lines))
 end
 
 vim.api.nvim_create_user_command("ITHGetLines", M.GetLines, {})
