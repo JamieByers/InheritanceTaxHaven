@@ -2,7 +2,7 @@ print("ITH plugin loaded")
 
 local M = {}
 
-function M.GetRoot();
+function M.GetRoot()
     local root = vim.fs.root(0, {
         ".git",
     })
